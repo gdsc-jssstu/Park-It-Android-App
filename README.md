@@ -39,5 +39,5 @@ The tech stack used here is,
 ---
 
 ## Intended final project:
-A smart Parking management system wherein security (admin) can update the status of parking slots and display it users. Make multiple area’s parking status visible to users.
+A smart Parking management system wherein security (admin) can update the status of parking slots and display it to users. Make multiple area’s parking status visible to users.
 
