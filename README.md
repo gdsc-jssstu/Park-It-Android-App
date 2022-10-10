@@ -25,7 +25,7 @@ The tech stack used here is,
 
 > Install Android Studio from this <a href="https://developer.android.com/studio/install?authuser=1"> LINK </a>
 
-> Create firebase account and its dependencies to project ( <a href="https://www.youtube.com/watch?v=5Sf51Pl8mS0"> LINK </a>
+> Create firebase account and its dependencies to project ( <a href="https://www.youtube.com/watch?v=5Sf51Pl8mS0"> LINK </a> )
 
 ---
 ## Final version of the project
