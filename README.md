@@ -20,6 +20,8 @@ The tech stack used here is,
 
 ---
 
+### `Before contributing look into `[CONTRIBUTING GUIDELINES](./CONTRIBUTING.md)
+
 
 ## Project setup instructions:
 
