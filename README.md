@@ -31,16 +31,13 @@ The tech stack used here is,
 
 ---
 ## Final version of the project
+
+Click <a href="https://www.figma.com/file/elUCM0aCTMjhZSsKzK8LH8/smart-parking-app?node-id=0%3A1"> here </a> for the UI design and prototype of the project.
+
 ![parking1](https://user-images.githubusercontent.com/108210777/194768792-9668280b-c3d0-4a7e-964e-0b51b053cbcc.png)
 ![parking2](https://user-images.githubusercontent.com/108210777/194768794-99a0f101-74d3-45ed-8fc6-dc5aff4ffd3d.png)
 ![parking3](https://user-images.githubusercontent.com/108210777/194768801-e5f75f24-5487-4b14-8559-f579f9f43f13.png)
 ![parking4](https://user-images.githubusercontent.com/108210777/194768805-010b2315-56d0-4fa1-839a-51ec438b5ffa.png)
-
-
- ---
-
-
-
 
 ---
 
