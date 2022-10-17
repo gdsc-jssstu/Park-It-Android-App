@@ -1,14 +1,11 @@
 package com.example.parkit;
 
-import static android.content.ContentValues.TAG;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;;
@@ -42,8 +39,7 @@ public class UserMainActivity extends AppCompatActivity {
         // These are the array list to get names and status of parking lots
         titles = new ArrayList<>();
         images = new ArrayList<>();
-
-
+        refresh.setPressed(true);
         // Updates will be shown if refresh is pressed
         refresh.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,9 +58,9 @@ public class UserMainActivity extends AppCompatActivity {
                                 int flag = Integer.parseInt(Objects.requireNonNull(snapshot.getValue()).toString());
 
                                 if (flag == 0)
-                                    images.add(R.drawable.red);
+                                    images.add(R.drawable.cardbgred);
                                 else
-                                    images.add(R.drawable.green);
+                                    images.add(R.drawable.cardbdgreen);
                             }
 
                             getAdapter();
@@ -89,7 +85,7 @@ public class UserMainActivity extends AppCompatActivity {
     private void getAdapter() {
         Adapter adapter = new Adapter(this, titles, images);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2,GridLayoutManager.VERTICAL,false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3,GridLayoutManager.VERTICAL,false);
         dataList.setLayoutManager(gridLayoutManager);
         dataList.setAdapter(adapter);
     }

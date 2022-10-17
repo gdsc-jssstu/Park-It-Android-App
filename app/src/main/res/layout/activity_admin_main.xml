@@ -5,8 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/white"
     tools:context=".AdminMainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="50dp"
+
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
 
     <Button
         android:id="@+id/add"
@@ -35,6 +48,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
         android:layout_marginBottom="70dp"
         android:scrollbars="none">
 
@@ -46,4 +60,27 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="35dp"
+        android:layout_toEndOf="@+id/imageButton4"
+        android:text="Areas"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:text="Number of slots available" />
 </RelativeLayout>
