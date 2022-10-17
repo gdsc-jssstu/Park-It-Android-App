@@ -74,6 +74,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                     }
                     else{
                         progessDialog.dismiss();
+                        sendAdminToNextActivity(); // extra temp line while developing (delete if not deleted)
                         Toast.makeText(AdminLoginActivity.this, "Incorrect Email / Password", Toast.LENGTH_SHORT).show();
                     }
                 }
