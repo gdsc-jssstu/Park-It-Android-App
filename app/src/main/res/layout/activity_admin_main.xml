@@ -30,6 +30,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
         android:background="@drawable/main_activity_button"
         android:text="Add" />
 
@@ -42,8 +43,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
         android:background="@drawable/main_activity_button"
         android:text="UPDATE" />
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -61,6 +64,17 @@
         </LinearLayout>
     </ScrollView>
 
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/area_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="520dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="138dp"-->
+<!--        android:layout_marginEnd="0dp" />-->
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="200dp"
@@ -76,11 +90,13 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="100dp"
+        android:text="Number of slots available"
         android:textColor="@color/black"
-        android:textSize="15dp"
-        android:text="Number of slots available" />
+        android:textSize="15dp" />
+
+
 </RelativeLayout>

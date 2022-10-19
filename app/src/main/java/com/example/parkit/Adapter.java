@@ -45,7 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return titles.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView title;
         ImageView gridIcon;
 
