@@ -20,6 +20,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     List<Integer> images;
     LayoutInflater inflater;
 
+
     public Adapter(Context ctx, List<String> titles, List<Integer> images){
         this.titles = titles;
         this.images = images;

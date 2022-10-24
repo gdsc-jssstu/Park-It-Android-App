@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;;
 
 
@@ -26,6 +27,10 @@ public class UserMainActivity extends AppCompatActivity {
     RecyclerView dataList;
     List<String> titles;
     List<Integer> images;
+    Integer count_green=0;
+    Integer count_red=0;
+    TextView green;
+    TextView red;
 
 
     @Override
@@ -34,6 +39,8 @@ public class UserMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_main);
         dataList = findViewById(R.id.dataList);
         refresh = findViewById(R.id.refresh);
+        green = findViewById(R.id.number_of_green);
+        red = findViewById(R.id.number_of_red);
 
 
         // These are the array list to get names and status of parking lots
@@ -57,14 +64,22 @@ public class UserMainActivity extends AppCompatActivity {
                                 titles.add(snapshot.getKey());
                                 int flag = Integer.parseInt(Objects.requireNonNull(snapshot.getValue()).toString());
 
-                                if (flag == 0)
+                                if (flag == 0){
                                     images.add(R.drawable.cardbgred);
-                                else
+                                    count_green=count_green+1;
+                                }
+
+                                else{
+                                    count_red=count_red+1;
                                     images.add(R.drawable.cardbdgreen);
+                                }
+
                             }
 
                             getAdapter();
                         }
+                        green.setText(count_green.toString());
+                        red.setText(count_red.toString());
                     }
 
                     @Override
