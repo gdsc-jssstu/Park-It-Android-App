@@ -68,12 +68,14 @@ public class UserMainActivity extends AppCompatActivity {
 
                                 if (flag == 0){
                                     images.add(R.drawable.cardbgred);
-                                    count_green=count_green+1;
+                                    count_red=count_red+1;
+
                                 }
 
                                 else{
-                                    count_red=count_red+1;
+
                                     images.add(R.drawable.cardbdgreen);
+                                    count_green=count_green+1;
                                 }
 
                             }

@@ -24,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 public class AdminMainActivity extends AppCompatActivity {
 
@@ -34,6 +35,8 @@ public class AdminMainActivity extends AppCompatActivity {
     LinearLayout layout;
 
     HashMap <String, Object> Slot = new HashMap<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +58,8 @@ public class AdminMainActivity extends AppCompatActivity {
             }
         });
 
-        //DatabaseReference parkingSlot = FirebaseDatabase.getInstance().getReference().child("Database").child("Parking Slots");
-        // Update button to push the data to firebase
+//        DatabaseReference parkingSlot = FirebaseDatabase.getInstance().getReference().child("Database").child("Parking Slots");
+//         Update button to push the data to firebase
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +68,6 @@ public class AdminMainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if ( task.isSuccessful())
-//                            getAdmin_Adapter();
                             Toast.makeText(AdminMainActivity.this, "Updated Successfully !!!", Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -91,7 +93,6 @@ public class AdminMainActivity extends AppCompatActivity {
                         String slotName = name.getText().toString();
                         Slot.put(slotName, 0);
                         addCard(slotName);
-//                        getAdmin_Adapter(slotName);
                         name.setText("");
                     }
                 })
