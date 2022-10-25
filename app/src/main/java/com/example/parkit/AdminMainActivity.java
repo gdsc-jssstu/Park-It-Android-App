@@ -3,6 +3,8 @@ package com.example.parkit;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -21,20 +23,26 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
 
 public class AdminMainActivity extends AppCompatActivity {
 
     Button add, update;
     AlertDialog dialog;
+//    RecyclerView dataList;
+//    List<String> titles;
     LinearLayout layout;
 
     HashMap <String, Object> Slot = new HashMap<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main);
-
+//        dataList = findViewById(R.id.area_list);
         add = findViewById(R.id.add);
         layout = findViewById(R.id.container);
         update = findViewById(R.id.update);
@@ -50,10 +58,12 @@ public class AdminMainActivity extends AppCompatActivity {
             }
         });
 
-        // Update button to push the data to firebase
+//        DatabaseReference parkingSlot = FirebaseDatabase.getInstance().getReference().child("Database").child("Parking Slots");
+//         Update button to push the data to firebase
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 FirebaseDatabase.getInstance().getReference().child("Database").child("Parking Slots").updateChildren(Slot).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -119,5 +129,15 @@ public class AdminMainActivity extends AppCompatActivity {
         });
 
         layout.addView(view);
+        return ;
     }
+
+//    private void getAdmin_Adapter(String slotname) {
+//        Admin_Adapter Admin_adapter = new Admin_Adapter(this, slotname );
+//
+//        //GridLayoutManager gridLayoutManager = new GridLayoutManager(this,1,GridLayoutManager.VERTICAL,false);
+//        //dataList.setLayoutManager(gridLayoutManager);
+////        dataList.setAdapter(Admin_adapter);
+//        return;
+//    }
 }

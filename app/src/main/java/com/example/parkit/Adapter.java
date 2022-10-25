@@ -20,6 +20,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     List<Integer> images;
     LayoutInflater inflater;
 
+
     public Adapter(Context ctx, List<String> titles, List<Integer> images){
         this.titles = titles;
         this.images = images;
@@ -45,7 +46,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return titles.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         TextView title;
         ImageView gridIcon;
 
