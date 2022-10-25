@@ -31,6 +31,7 @@ public class UserMainActivity extends AppCompatActivity {
     Integer count_red=0;
     TextView green;
     TextView red;
+    TextView total;
 
 
     @Override
@@ -41,6 +42,7 @@ public class UserMainActivity extends AppCompatActivity {
         refresh = findViewById(R.id.refresh);
         green = findViewById(R.id.number_of_green);
         red = findViewById(R.id.number_of_red);
+        total = findViewById(R.id.total_count);
 
 
         // These are the array list to get names and status of parking lots
@@ -80,6 +82,8 @@ public class UserMainActivity extends AppCompatActivity {
                         }
                         green.setText(count_green.toString());
                         red.setText(count_red.toString());
+                        Integer t = count_green+count_red;
+                        total.setText(t.toString());
                     }
 
                     @Override
